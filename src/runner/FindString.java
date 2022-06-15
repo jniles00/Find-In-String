@@ -32,7 +32,6 @@ public class FindString {
 		if (!wordFound) {
 			System.out.println("Sorry " + wordToFind + " is not in this sentence");
 		}
-
 		return null;
 	}
 
@@ -41,7 +40,7 @@ public class FindString {
 		System.out.println("Please enter a sentence: ");
 		sentence = userInput.getString();
 
-		System.out.println("Great! Now enter the word you want to find within the sentence: ");
+		System.out.println("Great! Now enter the word you want to find the location of within the sentence: ");
 		wordToFind = userInput.getString();
 
 		if (sentence.contains(wordToFind)) {
@@ -51,10 +50,13 @@ public class FindString {
 			for (int i = 0; i < sentenceArr.length; i++) {
 				if (sentenceArr[i].equals(wordToFind)) {
 					System.out.println("The location of " + wordToFind + " is: " + i);
-				} else {
-					return "Sorry, that word doesn't seem to be in this sentence";
+					wordFound = true;
 				}
 			}
+		}
+		
+		if(!wordFound) {
+			System.out.println("Sorry " + wordToFind + " is not in this sentence");
 		}
 		return null;
 	}
