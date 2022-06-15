@@ -6,7 +6,7 @@ public class Main {
 
 		FindString findString = new FindString();
 		
-		findString.WordFinder();
+		//findString.WordFinder();
 		findString.WordLocation();
 	}
 }
